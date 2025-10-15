@@ -112,7 +112,7 @@ def plotar_mapa_com_circulos(df, df_agentes, covered_mask, RAIO_KM=100, mostrar_
         lat=df.loc[~covered_mask,'lat'],
         lon=df.loc[~covered_mask,'lon'],
         mode='markers',
-        marker=dict(size=6,color='red',opacity=0.8,symbol='circle'),
+        marker=dict(size=6,color='gray',opacity=0.8,symbol='circle'),
         name='Não cobertos',
         hovertemplate="Agente mais próximo: %{customdata[0]}<br>Distância (km): %{customdata[1]:.2f}<br>Lat: %{lat}<br>Lon: %{lon}",
         customdata=np.array([df.loc[~covered_mask,'agente_idx'], df.loc[~covered_mask,'dist_to_agent_km']]).T
